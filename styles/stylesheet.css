@@ -1,0 +1,40 @@
+html, body {
+  height: 100%;
+}
+
+main {
+  background-color: #b3f963;
+  margin-top: -20px;
+  min-height: 100%;
+  margin-bottom: -142px;  /* make equal to footer height */
+}
+
+main:after {
+  content: "";
+  display: block;
+}
+
+footer, main:after {
+  height: 142px;
+}
+
+footer {
+  background-color: #C8F94A
+}
+
+.navbar-default {
+    background-color: #C8F94A;
+    border-color: #FFFFFF;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #FAFFEF;
+    font-size: 20px;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background-color: #E7E7E7;
+    color: #555555;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
