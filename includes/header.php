@@ -42,6 +42,7 @@
                 <li><a href="#">Logout</a></li>
               </ul>
             </li>
+            <li><a href="./newuser.php">Register</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
