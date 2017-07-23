@@ -5,6 +5,12 @@
 
 ?>
 
+<?php 
+  include("includes/DataBaseWork.php");
+  $DBConnect = new DataBaseWork();
+   echo $DBConnect->ConnectDB();
+?>
+
 <main>
   <br><br>
   <h1>New User Registration</h1>
