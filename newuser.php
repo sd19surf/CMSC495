@@ -5,12 +5,6 @@
 
 ?>
 
-<?php 
-  include("includes/DataBaseWork.php");
-  $DBConnect = new DataBaseWork();
-   echo $DBConnect->ConnectDB();
-?>
-
 <main>
   <br><br>
   <h1>New User Registration</h1>
@@ -20,7 +14,7 @@
     <div class="col-md-8 col-md-offset-2">
 
       <!-- New User Registration Form -->
-      <form>
+      <form action="includes/register.php" method="post">
         <div class="form-group">
           <label for="firstname">First Name</label>
           <input
