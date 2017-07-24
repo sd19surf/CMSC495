@@ -10,10 +10,11 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 
 } elseif(!empty($_POST['username']) && !empty($_POST['password']))
 {
-	$username = mysqli_real_escape_string($_POST['username']);
-	$password = md5(mysqli_real_escape_string($_POST['password']));
+	$username = $conn->real_escape_string($_POST['username']);
+	$password = md5($conn->real_escape_string($_POST['password'])); //funny my password isn't MD5 in the db ha ha ha  
 
-	$checklogin = mysqli_query("SELECT * FROM users WHERE Username = '".$username."' AND Password = '".$password."'");
+	$checklogin = $conn->query("SELECT * FROM user WHERE Username = '".$username."' AND Password = '".$password."'");
+
 
 	if(mysqli_num_rows($checklogin) == 1){
 	   $row = mysqli_fetch_array($checklogin);
