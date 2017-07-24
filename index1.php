@@ -27,7 +27,7 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 	
 	  echo "<h1>Success</h1>";
 	  echo "<p>We are now redirecting you to the member area.</p>";
-	  echo "<meta http-equiv='refresh' content='=2;index.php' />";
+	  echo "<meta http-equiv='refresh' content='=2;index1.php' />";
 	} else {
 	  echo "<h1>Error</h1>";
 	  echo "<p>Sorry, your account could not be found. Please <a href=\"index.php\">click here to try again</a>.</p>";
