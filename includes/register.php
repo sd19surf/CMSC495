@@ -15,9 +15,9 @@ $config = parse_ini_file('../../../config.ini');
 // firstname=&lastname=&email=&username=&password1=&password2=
 $value2 = $_POST['firstname'];
 $value3 = $_POST['lastname'];
-$value4 = $_POST['email'];
-$value5 = $_POST['username'];
-$value6 = $_POST['password1'];
+$value4 = $_POST['username'];
+$value5 = $_POST['email'];
+$value6 = md5($_POST['password1']);
 //$confirmPass = &_POST['password2'];
 
 
