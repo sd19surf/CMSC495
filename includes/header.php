@@ -30,7 +30,14 @@
             <li><a href="./about.php">About</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <p class="navbar-text">Signed in as [USER]</p>
+	     <?php if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])){
+			$displayName = $_SESSION['Username'];
+		   } else {
+			$displayName = "[USER]";
+		   }
+	      ?>
+			
+            <p class="navbar-text">Signed in as <?=$displayName?></p>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Profile <span class="caret"></span>
@@ -39,7 +46,7 @@
                 <li><a href="#">View my Messages</a></li>
                 <li><a href="#">Upload Avatar</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="includes/logout.php">Logout</a></li>
               </ul>
             </li>
             <li><a href="./newuser.php">Register</a></li>
