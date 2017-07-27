@@ -1,15 +1,7 @@
 <?php
 // connect to the database
-
-$config = parse_ini_file('../../../config.ini');
- 
- $conn = new mysqli('localhost', $config['username'], $config['password'],$config['dbname']);
-
-	// Check connection
-		if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-		} 
-   
+  
+ include "session.php";
 
 //   Get all the variables passed from the html form
 // firstname=&lastname=&email=&username=&password1=&password2=
@@ -31,9 +23,10 @@ $value6 = md5($_POST['password1']);
 	// Current Date for Last_Login
 
 	$lastlogin = date("Ymd");
+	$avatar = "/images/blank_profile.gif";
 
-	$sql = "INSERT INTO user (UserId, First_Name, Last_Name, Username, Email, Password, Last_Login) VALUES ('$userid', '$value2', 
-     '$value3', '$value4', '$value5', '$value6','$lastlogin')";
+	$sql = "INSERT INTO user (UserId, First_Name, Last_Name, Username, Email, Password, Icon, Last_Login) VALUES ('$userid', '$value2', 
+     '$value3', '$value4', '$value5', '$value6', '$avatar','$lastlogin')";
 
 	$query = $conn->query($sql);
 
@@ -43,5 +36,6 @@ $value6 = md5($_POST['password1']);
 
 $close = $conn->close();
 
+echo "<meta http-equiv='refresh' content='=2;index1.php' />";
 
 ?>
