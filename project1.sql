@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 16, 2017 at 04:11 AM
+-- Generation Time: Jul 28, 2017 at 12:44 AM
 -- Server version: 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -25,19 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `messages`
---
-
-CREATE TABLE `messages` (
-  `UserId` varchar(20) NOT NULL,
-  `Messages` varchar(250) NOT NULL,
-  `Lat` float NOT NULL,
-  `Lon` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `user`
 --
 
@@ -48,19 +35,13 @@ CREATE TABLE `user` (
   `Username` varchar(100) NOT NULL,
   `Email` varchar(150) NOT NULL,
   `Password` varchar(512) NOT NULL,
-  `Icon` longblob NOT NULL,
+  `Icon` mediumtext NOT NULL,
   `Last_Login` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `messages`
---
-ALTER TABLE `messages`
-  ADD PRIMARY KEY (`UserId`);
 
 --
 -- Indexes for table `user`
