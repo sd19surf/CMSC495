@@ -1,6 +1,7 @@
 
 
 <?php include "includes/header.php" ?>
+<main>
 <?php
 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 {
@@ -47,11 +48,12 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 			<input type="submit" name="login" id="login" value="Login" />
 		    </fieldset>
 		</form>
-
+</main>
 <?php
+	include('includes/footer.php');
 }
 ?>
 
-</div>
+
 </body>
 </html>
