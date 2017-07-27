@@ -1,7 +1,5 @@
 
 
-
-<?php include "includes/session.php" ?>
 <?php include "includes/header.php" ?>
 <?php
 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
@@ -19,10 +17,14 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 	if(mysqli_num_rows($checklogin) == 1){
 	   $row = mysqli_fetch_array($checklogin);
 	   $email = $row['Email'];
+	   $icon = $row['Icon'];
+	   $userid = $row['UserId'];
 	
 		// set session variable
 	  $_SESSION['Username'] = $username;
 	  $_SESSION['EmailAddress'] = $email;
+	  $_SESSION['Icon'] = $icon;
+	  $_SESSION['UserId'] = $userid;
 	  $_SESSION['LoggedIn'] = 1;
 	
 	  echo "<h1>Success</h1>";
