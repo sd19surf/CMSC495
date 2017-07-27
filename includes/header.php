@@ -12,6 +12,10 @@
 
     <link rel="stylesheet" href="./styles/stylesheet.css">
 
+   <!--- Include session.php to keep the database connection open for all --->
+
+	<?php include "session.php"; ?>
+
   </head>
 
   <!-- Open the body section - to be closed in the footer.php include -->
@@ -32,19 +36,21 @@
           <ul class="nav navbar-nav navbar-right">
 	     <?php if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])){
 			$displayName = $_SESSION['Username'];
+			$displayImage = $_SESSION['Icon'];
 		   } else {
 			$displayName = "[USER]";
+			$displayImage = "images/blank_profile.gif";
 		   }
 	      ?>
 			
-            <p class="navbar-text">Signed in as <?=$displayName?></p>
+            <p class="navbar-text"><img src="<?=$displayImage?>" width="30px" height="40px">Signed in as <?=$displayName?></p>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Profile <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
                 <li><a href="#">View my Messages</a></li>
-                <li><a href="#">Upload Avatar</a></li>
+                <li><a href="picture.php">Upload Avatar</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="includes/logout.php">Logout</a></li>
               </ul>
