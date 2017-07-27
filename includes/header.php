@@ -43,7 +43,7 @@
 		   }
 	      ?>
 			
-            <p class="navbar-text"><img src="<?=$displayImage?>" width="30px" height="40px">Signed in as <?=$displayName?></p>
+            <p class="navbar-text"><img src="<?=$displayImage?>" width="25px" height="30px">Signed in as <?=$displayName?></p>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Profile <span class="caret"></span>
