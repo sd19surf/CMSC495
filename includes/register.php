@@ -9,8 +9,8 @@ $value2 = stripslashes($_POST['firstname']);
 $value3 = stripslashes($_POST['lastname']);
 $value4 = stripslashes($_POST['username']);
 $value5 = stripslashes($_POST['email']);
-$value6 = md5($_POST['password1']);
-$confirmPass = md5($_POST['password2']);
+$value6 = md5(stripslashes($_POST['password1']));
+$confirmPass = md5(stripslashes($_POST['password2']));
 
 confirmpasswords($value6,$confirmPass);
 
