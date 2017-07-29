@@ -8,7 +8,7 @@
 <main>
   <div class="container">
 
-    <!-- Form Title Text -->
+    <!-- Register Title Text -->
     <br><br>
     <div class="row">
       <div class="col-md-6 col-md-offset-3 text-center">
@@ -78,7 +78,7 @@
               placeholder="Confirm Password"
               name="password2">
           </div>
-          <button type="submit" class="btn btn-warning">Submit</button>
+          <button type="submit" class="btn btn-warning btn-lg">Submit</button>
         </form>
       </div>
     </div>
@@ -86,7 +86,7 @@
     <!-- Already a member? -->
     <div class="row">
       <div class="col-md-6 col-md-offset-3 text-center">
-        <h4>Already a member? <a href="#">Sign in here</a></h4>
+        <h4>Already a member? <a href="./index1.php">Sign in here</a></h4>
       </div>
     </div>
   </div>
