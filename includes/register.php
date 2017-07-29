@@ -5,13 +5,14 @@
 
 //   Get all the variables passed from the html form
 // firstname=&lastname=&email=&username=&password1=&password2=
-$value2 = $_POST['firstname'];
-$value3 = $_POST['lastname'];
-$value4 = $_POST['username'];
-$value5 = $_POST['email'];
+$value2 = stripslashes($_POST['firstname']);
+$value3 = stripslashes($_POST['lastname']);
+$value4 = stripslashes($_POST['username']);
+$value5 = stripslashes($_POST['email']);
 $value6 = md5($_POST['password1']);
-//$confirmPass = &_POST['password2'];
+$confirmPass = md5($_POST['password2']);
 
+confirmpasswords($value6,$confirmPass);
 
 // insert the user information
 
@@ -37,5 +38,12 @@ $value6 = md5($_POST['password1']);
 $close = $conn->close();
 
 echo "<meta http-equiv='refresh' content='=2;index1.php' />";
+
+function confirmpasswords($password1,$password2) {
+	if($password1 != $password2){
+	echo "Error...Passwords do not match";
+	echo "<meta http-equiv='refresh' content='=2;newuser.php' />";
+	}
+}
 
 ?>
