@@ -6,10 +6,11 @@
     <title>GeoChat - <?php echo $page_title; ?></title>
 
     <!-- Using CDN for now - can include local files later or scrap bootstrap altogether -->
+    <script src="./scripts/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="./styles/leaflet.css">
     <link rel="stylesheet" href="./styles/stylesheet.css">
 
    <!--- Include session.php to keep the database connection open for all --->
@@ -42,7 +43,7 @@
 			$displayImage = "images/blank_profile.gif";
 		   }
 	      ?>
-			
+
             <p class="navbar-text"><img src="<?=$displayImage?>" width="25px" height="30px">Signed in as <?=$displayName?></p>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
