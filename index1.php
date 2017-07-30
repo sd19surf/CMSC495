@@ -43,9 +43,13 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 	?>
 
 <div class="container">
-	<br><br>
+
 	<!-- Add GeoChat Logo -->
-	<img src="./images/GeoChatLogo.png" alt="">
+  <div class="row" style="margin-top: 75px">
+    <div class="col-md-6 col-md-offset-3">
+      <img src="./images/GeoChatLogo.png" class ="img-responsive" alt="GeoChat's logo">
+    </div>
+  </div>
 
 	<br><br>
 	<!-- Login Title Text -->
@@ -65,12 +69,22 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 			<form method="post" action="index1.php" name="loginform" id="loginform">
 				<br>
 				<div class="form-group">
-					<label for="username">Username:</label>
-					<input type="text" class="form-control" name="username" id="username"/>
+					<label for="username">Username</label>
+					<input
+            type="text"
+            class="form-control"
+            id="username"
+            placeholder="Enter your username here"
+            name="username" />
 				</div>
 				<div class="form-group">
-					<label for="password">Password:</label>
-					<input type="password" class="form-control" name="password" id="password" />
+					<label for="password">Password</label>
+					<input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Enter your password here"
+            name="password" />
 				</div>
 				<input type="submit" class="btn btn-success btn-lg" name="login" id="login" value="Login"/>
 			</form>
