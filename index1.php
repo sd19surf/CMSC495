@@ -44,6 +44,10 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 
 <div class="container">
 	<br><br>
+	<!-- Add GeoChat Logo -->
+	<img src="./images/GeoChatLogo.png" alt="">
+
+	<br><br>
 	<!-- Login Title Text -->
 	<div class="row">
 		<div class="col-md-6 col-md-offset-3 text-center">
