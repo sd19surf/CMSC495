@@ -6,7 +6,7 @@ main {
   background-color: #b3f963;
   margin-top: -20px;
   min-height: 100%;
-  margin-bottom: -142px;  /* make equal to footer height */
+  margin-bottom: -100px;  /* make equal to footer height */
 }
 
 main:after {
@@ -15,7 +15,7 @@ main:after {
 }
 
 footer, main:after {
-  height: 142px;
+  height: 100px;
 }
 
 footer {
