@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 28, 2017 at 11:04 PM
+-- Generation Time: Jul 31, 2017 at 01:28 AM
 -- Server version: 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -36,6 +36,14 @@ CREATE TABLE `messages` (
   `timeposted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`UserId`, `Messages`, `Lat`, `Lon`, `timeposted`) VALUES
+('597ced7348ee8', 'Testing the system', 34.46, 46.34, '2017-07-29 21:31:00'),
+('597ced7348ee8', 'Another test from sd19surf', 35.36, 46.34, '2017-07-29 23:08:16');
+
 -- --------------------------------------------------------
 
 --
@@ -58,7 +66,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`UserId`, `First_Name`, `Last_Name`, `Username`, `Email`, `Password`, `Icon`, `Last_Login`) VALUES
-('597a9586cc91a', 'John', 'Delaney', 'sd19surf', 'sd19surf@gmail.com', '098f6bcd4621d373cade4e832627b4f6', '../images/old forecaster meme.jpg', '2017-07-28');
+('597a9586cc91a', 'John', 'Delaney', 'sd19surf', 'sd19surf@gmail.com', '098f6bcd4621d373cade4e832627b4f6', '../images/Capture2.PNG', '2017-07-28'),
+('597bf6fed5e3c', 'test', 'upload', 'kyleavatar', 'myemailaddress@domain.com', '202cb962ac59075b964b07152d234b70', '../images/testman.jpg', '2017-07-29'),
+('597ced7348ee8', 'Ash', 'Delaney', 'a5hl34', 'a5hl34rcks@gmail.com', '098f6bcd4621d373cade4e832627b4f6', '/images/blank_profile.gif', '2017-07-29');
 
 --
 -- Indexes for dumped tables
@@ -68,7 +78,7 @@ INSERT INTO `user` (`UserId`, `First_Name`, `Last_Name`, `Username`, `Email`, `P
 -- Indexes for table `messages`
 --
 ALTER TABLE `messages`
-  ADD PRIMARY KEY (`UserId`);
+  ADD KEY `UserId` (`UserId`) USING BTREE;
 
 --
 -- Indexes for table `user`
