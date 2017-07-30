@@ -38,3 +38,8 @@ footer {
 .navbar {
   margin-bottom: 0;
 }
+
+#map {
+  background-color: gray;
+  height: 500px;
+}
