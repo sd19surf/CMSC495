@@ -3,8 +3,11 @@
   $page_title = "Map";  # changes some of <title> in header.php to 'Map'
   include("includes/header.php");
 
-?>
 
+if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
+{
+ // let the user access the main page
+?>
 <main>
   <br><br>
   <div class="container">
@@ -43,4 +46,13 @@
   </div>
 </main>
 
+<?php 
+} else {
+?>
+  <main>
+	<h1> Not authorized to view this page, please login. </h1>
+  </main>
+<?php
+}
+?>
 <?php include("includes/footer.php"); ?>
