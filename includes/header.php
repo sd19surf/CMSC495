@@ -49,12 +49,18 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Profile <span class="caret"></span>
               </a>
+	    <?php if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username'])){?>
               <ul class="dropdown-menu">
                 <li><a href="#">View my Messages</a></li>
                 <li><a href="picture.php">Upload Avatar</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="includes/logout.php">Logout</a></li>
               </ul>
+	    <?php } else { ?>
+		<ul class="dropdown-menu">
+		  <li><a href="index1.php">Login</a></li>
+		</ul>
+	     <?php } ?>
             </li>
             <li><a href="./newuser.php">Register</a></li>
           </ul>
