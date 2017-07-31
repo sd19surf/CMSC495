@@ -11,7 +11,19 @@
     <div class="row">
       <div class="col-md-7" id="map">
         <!-- Map Area Here -->
-        <h1>map</h1>
+<script>
+	var mymap = L.map('map').setView([34.56, 45.46], 13); // change to reflect users current location
+
+	L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	    maxZoom: 18,
+	    id: 'mapbox.streets'
+	}).addTo(mymap);
+
+	//function addNewPoint(){
+	//	L.marker([mapLat, mapLon]).addTo(map);
+	//}
+
+</script>
       </div>
       <div class="col-md-4 col-md-offset-1">
 
