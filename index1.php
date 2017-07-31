@@ -46,7 +46,7 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 
 	<!-- Add GeoChat Logo -->
   <div class="row" style="margin-top: 75px">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-6 col-md-offset-3 col-xs-8 col-xs-offset-2">
       <img src="./images/GeoChatLogo.png" class ="img-responsive" alt="GeoChat's logo">
     </div>
   </div>

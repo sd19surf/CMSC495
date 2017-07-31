@@ -4,9 +4,9 @@ html, body {
 
 main {
   background-color: #b3f963;
-  margin-top: -20px;
+  margin-top: -82px;
   min-height: 100%;
-  margin-bottom: -100px;  /* make equal to footer height */
+  margin-bottom: -70px;  /* make equal to footer height */
 }
 
 main:after {
@@ -15,7 +15,7 @@ main:after {
 }
 
 footer, main:after {
-  height: 100px;
+  height: 70px;
 }
 
 footer {
@@ -37,6 +37,10 @@ footer {
 
 .navbar {
   margin-bottom: 0;
+}
+
+main {
+  padding-top: 80px;
 }
 
 #map {
