@@ -1,6 +1,7 @@
 <?php
 
-include('session.php');
+//include('session.php'); no longer required since it's hooked up to map.php
+
 	// retrieve messages query will have to retrieve avatar image as well.
 	// so query both tables and match userid to userid and get icon
 
@@ -17,7 +18,9 @@ include('session.php');
      $rows[] = $r;
    }
 
- print json_encode($rows);
+   $_SESSION['Messages'] = json_encode($rows);
+
+ //print json_encode($rows);
 
  $close = $conn->close();
 
