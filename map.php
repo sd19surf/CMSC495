@@ -2,13 +2,16 @@
 
   $page_title = "Map";  # changes some of <title> in header.php to 'Map'
   include("includes/header.php");
+  include("includes/retrieve.php");
 
 
 if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 {
  // let the user access the main page
+ //print $_SESSION['Messages']; // Built into a session variable for future add-ons if needed.
 ?>
 <p id="warning"></p>
+
 <body>
 <main> 
   <br><br>
@@ -70,14 +73,19 @@ var latLng;
  	var mymap = L.map('map').setView([latLng.lat,latLng.lng], 10); 
 
 
+	// could add options here for different maps but could be
+	// mentioned as a future add-on
 
 	L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	    maxZoom: 18,
 	    id: 'mapbox.streets'
 	}).addTo(mymap);
 
-	// use ajax to pull information from database make markers
+	// put all the information to loop through in $_SESSION['Messages'] 
+	// this is the place to add the markers to the map and link the photos.
+
 	L.marker([33.91693830900244, -80.4132318869965]).addTo(mymap);
+
 });
 }
 </script>
