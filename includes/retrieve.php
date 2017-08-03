@@ -5,7 +5,7 @@
 	// retrieve messages query will have to retrieve avatar image as well.
 	// so query both tables and match userid to userid and get icon
 
-	// tune this query to 
+	// tune this query to retrieve the latest request from the user and the latest message from each user.
   $query = $conn->query("SELECT u.Icon, u.username , m.messages, m.lat, m.lon, m.timeposted FROM user u, messages m WHERE u.UserId=m.UserId");
 
 	//return as JSON and provide to leaflet and process there?
