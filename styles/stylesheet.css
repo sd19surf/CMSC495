@@ -5,6 +5,7 @@ html, body {
 main {
   background-color: #b3f963;
   margin-top: -82px;
+  padding-top: 80px;
   min-height: 100%;
   margin-bottom: -70px;  /* make equal to footer height */
 }
@@ -39,11 +40,11 @@ footer {
   margin-bottom: 0;
 }
 
-main {
-  padding-top: 80px;
-}
-
 #map {
   background-color: gray;
   height: 500px;
+}
+
+.label-md {
+  font-size: 14px;
 }
