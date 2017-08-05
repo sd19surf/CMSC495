@@ -13,7 +13,7 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 <p id="warning"></p>
 
 <body>
-<main> 
+<main>
   <br><br>
   <div class="container">
     <div class="row">
@@ -26,22 +26,24 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
         <!-- textArea here -->
         <form class="" action="includes/messages.php" method="post">
           <div class="form-group">
-	    <input type="hidden" id="latDB" name="latDB" value="" />
-	    <input type="hidden" id="lonDB" name="lonDB" value="" />
-            <label for="message">Enter a message below:</label>
-            <textarea class="form-control" rows="8" name="message" id="message"></textarea>
+	           <input type="hidden" id="latDB" name="latDB" value="" />
+	            <input type="hidden" id="lonDB" name="lonDB" value="" />
+              <label for="message">Enter a message below:</label>
+              <textarea class="form-control" rows="8" name="message" id="message"></textarea>
           </div>
           <input type="submit" name="button" class="btn btn-primary btn-lg"></button>
         </form>
-
-
       </div>
+    </div>
+
+    <div id="testing">
+
     </div>
 
   </div>
 </main>
 </body>
-<?php 
+<?php
 } else {
 ?>
   <main>
@@ -51,6 +53,7 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 }
 ?>
 <?php include("includes/footer.php"); ?>
+
 <script>
 var latLng;
 
@@ -67,10 +70,9 @@ var latLng;
 
 	document.getElementById('latDB').value = latLng.lat;
 	document.getElementById('lonDB').value = latLng.lng;
-	
 
 
- 	var mymap = L.map('map').setView([latLng.lat,latLng.lng], 10); 
+ 	var mymap = L.map('map').setView([latLng.lat,latLng.lng], 10);
 
 
 	// could add options here for different maps but could be
@@ -81,11 +83,18 @@ var latLng;
 	    id: 'mapbox.streets'
 	}).addTo(mymap);
 
-	// put all the information to loop through in $_SESSION['Messages'] 
+	// put all the information to loop through in $_SESSION['Messages']
 	// this is the place to add the markers to the map and link the photos.
 
 	L.marker([33.91693830900244, -80.4132318869965]).addTo(mymap);
 
+
+
+  var messages = <?php echo json_encode($_SESSION['Messages']); ?>;
+
+  document.getElementById('testing').innerHTML = messages;
+
 });
 }
+
 </script>
