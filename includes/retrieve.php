@@ -6,18 +6,18 @@
 	// so query both tables and match userid to userid and get icon
 
 	// tune this query to retrieve the latest request from the user and the latest message from each user.
-	// reduced the look to recent message within one minute. 
+	// reduced the look to recent message within one minute.
   $query = $conn->query("
 		SELECT u.Icon, u.username, m.messages, m.lat, m.lon, m.timeposted
-		 FROM user u, messages m 
-		 WHERE u.UserId = m.UserId AND TIMESTAMPDIFF(MINUTE,m.timeposted,Now())<1
+		 FROM user u, messages m
+		 WHERE u.UserId = m.UserId 
 		 GROUP BY m.UserId, m.timeposted
 		 ORDER BY m.timeposted ASC
 		");
 
 	//return as JSON and provide to leaflet and process there?
 
- 
+
 	//test script
 
  $rows = array();
