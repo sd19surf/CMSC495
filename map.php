@@ -66,6 +66,7 @@ var latLng;
       lng: position.coords.longitude
     };
 
+
 	//place the coordinates in the hidden input fields of the form
 
 	document.getElementById('latDB').value = latLng.lat;
@@ -86,13 +87,16 @@ var latLng;
 	// put all the information to loop through in $_SESSION['Messages']
 	// this is the place to add the markers to the map and link the photos.
 
-	L.marker([33.91693830900244, -80.4132318869965]).addTo(mymap);
+  // Will need to check if this line is just switching JSON to string and back again needlessly...
+  var userMessages = JSON.parse(<?php echo json_encode($_SESSION['Messages']);?>);
 
-
-
-  var messages = <?php echo json_encode($_SESSION['Messages']); ?>;
-
-  document.getElementById('testing').innerHTML = messages;
+  userMessages.forEach(function(message) {
+    // If there is a lat and lon, then add the marker and its message.
+    if (message.lat != null && message.lon != null) {
+      L.marker([message.lat, message.lon]).addTo(mymap)
+        .bindPopup(message.messages);
+    }
+  });
 
 });
 }
