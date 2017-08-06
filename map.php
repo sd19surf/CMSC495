@@ -93,8 +93,10 @@ var latLng;
   userMessages.forEach(function(message) {
     // If there is a lat and lon, then add the marker and its message.
     if (message.lat != null && message.lon != null) {
+
+	
       L.marker([message.lat, message.lon]).addTo(mymap)
-        .bindPopup(message.messages);
+        .bindPopup('<img src="'+message.Icon+'" width="30" height="25"><b> '+message.username+'</b><br> '+message.messages);
     }
   });
 
