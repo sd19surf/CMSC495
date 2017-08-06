@@ -79,7 +79,7 @@ var latLng;
 	// could add options here for different maps but could be
 	// mentioned as a future add-on
 
-	L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	    maxZoom: 18,
 	    id: 'mapbox.streets'
 	}).addTo(mymap);
@@ -94,10 +94,13 @@ var latLng;
     // If there is a lat and lon, then add the marker and its message.
     if (message.lat != null && message.lon != null) {
 
-	
       L.marker([message.lat, message.lon]).addTo(mymap)
         .bindPopup('<img src="'+message.Icon+'" width="30" height="25"><b> '+message.username+'</b><br> '+message.messages);
-    }
+    
+	}
+ 
+
+
   });
 
 });

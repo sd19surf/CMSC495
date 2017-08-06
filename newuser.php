@@ -86,7 +86,7 @@
     <!-- Already a member? -->
     <div class="row">
       <div class="col-md-6 col-md-offset-3 text-center">
-        <h4>Already a member? <a href="./index1.php">Sign in here</a></h4>
+        <h4>Already a member? <a href="./index.php">Sign in here</a></h4>
       </div>
     </div>
   </div>

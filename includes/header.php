@@ -58,7 +58,7 @@
               </ul>
 	    <?php } else { ?>
 		<ul class="dropdown-menu">
-		  <li><a href="index1.php">Login</a></li>
+		  <li><a href="index.php">Login</a></li>
 		</ul>
 	     <?php } ?>
             </li>
