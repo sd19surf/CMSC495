@@ -37,7 +37,8 @@ confirmpasswords($value6,$confirmPass);
 
 $close = $conn->close();
 
-echo "<meta http-equiv='refresh' content='=2;index.php' />";
+echo "Thank you for registering";
+echo "<meta http-equiv='refresh' content='=2;/index.php' />";
 
 function confirmpasswords($password1,$password2) {
 	if($password1 != $password2){
@@ -47,3 +48,4 @@ function confirmpasswords($password1,$password2) {
 }
 
 ?>
+
