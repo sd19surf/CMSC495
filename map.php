@@ -47,7 +47,7 @@ if(!empty($_SESSION['LoggedIn']) && !empty($_SESSION['Username']))
 } else {
 ?>
   <main>
-	<h1> Not authorized to view this page, please login. </h1>
+	<h1> Not authorized to view this page, please <a href="index.php">login</a>.</h1>
   </main>
 <?php
 }
@@ -96,9 +96,9 @@ var latLng;
 
       L.marker([message.lat, message.lon]).addTo(mymap)
         .bindPopup('<img src="'+message.Icon+'" width="30" height="25"><b> '+message.username+'</b><br> '+message.messages);
-    
+
 	}
- 
+
 
 
   });
