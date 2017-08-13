@@ -37,8 +37,7 @@ confirmpasswords($value6,$confirmPass);
 
 $close = $conn->close();
 
-echo "Thank you for registering";
-echo "<meta http-equiv='refresh' content='=2;/index.php' />";
+header("Location: https://www.expweather.com/success.php");
 
 function confirmpasswords($password1,$password2) {
 	if($password1 != $password2){
