@@ -12,7 +12,7 @@
       <h1 class="text-center"> Upload avatar for map display </h1>
       <br><br>
       <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 text-center">
-        <form action="includes/upload.php" method="post" enctype="multipart/form-data">
+        <form action="upload.php" method="post" enctype="multipart/form-data">
 
           <p>Select image to upload from your local files</p><br>
           <label class="btn btn-warning btn-lg btn-block" for="fileToUpload">
